@@ -1,0 +1,10 @@
+<div class="toDoForm">
+<input placeholder="status" name="status" (input)="filterChange($event)"/>
+<input placeholder="Date" name="date" (input)="filterChange($event)"/>
+<input placeholder="Place Name" name="placeName" (input)="filterChange($event)"/>
+<input placeholder="Address" name="address" (input)="filterChange($event)"/>
+<button (click)="addFilter()">add</button>
+</div>
+  <div >
+  <app-todo *ngFor="let toDo of filteredToDoList;let idx=index" [todo]="toDo"></app-todo>
+</div>

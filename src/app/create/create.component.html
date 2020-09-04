@@ -1,0 +1,12 @@
+<div class="toDoForm">
+<input placeholder="Title" (input)="handleChange($event)" name="title"/>
+<input placeholder="Description" name="description" (input)="handleChange($event)"/>
+<input placeholder="status" name="status" (input)="handleChange($event)"/>
+<input placeholder="Date" name="date" (input)="handleChange($event)"/>
+<input placeholder="Place Name" name="placeName" (input)="handleChange($event)"/>
+<input placeholder="Address" name="address" (input)="handleChange($event)"/>
+<button (click)="toDoAdd()">add</button>
+</div>
+<div >
+  <app-todo *ngFor="let toDo of todoList;let idx=index" [todo]="toDo" [delete]="delete" [index]="idx"></app-todo>
+</div>

@@ -1,0 +1,40 @@
+.todo{
+  margin-left: 20%;
+  margin-top: 40px;
+  border: 1px solid grey;
+  width: 65%;
+.todo-firstBlock{
+  display: flex;
+  align-items: center;
+h2{
+  margin-left: 30px;
+  margin-right: 30px;
+}
+}
+}
+.todo-secondBlock{
+  display: flex;
+  button{
+    background: none;
+    border: none;
+&:hover{
+  text-decoration: underline;
+}
+
+  }
+
+}
+.todoActive{
+  margin-left: 20%;
+  margin-top: 40px;
+  border: 1px solid green;
+  width: 65%;
+  .todo-firstBlock{
+    display: flex;
+    align-items: center;
+    h2{
+      margin-left: 30px;
+      margin-right: 30px;
+    }
+  }
+}

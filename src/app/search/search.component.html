@@ -1,0 +1,9 @@
+<div class="toDoForm">
+<input placeholder="Title" (input)="searchParamsChange($event)" name="title"/>
+<input placeholder="Place Name" name="placeName" (input)="searchParamsChange($event)"/>
+<input placeholder="Address" name="address" (input)="searchParamsChange($event)"/>
+<button (click)="search()">add</button>
+</div>
+  <div >
+  <app-todo *ngFor="let toDo of findedTodosList;let idx=index" [todo]="toDo"></app-todo>
+</div>

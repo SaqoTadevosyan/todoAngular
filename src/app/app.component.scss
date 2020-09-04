@@ -1,0 +1,17 @@
+nav{
+height: 70px;
+  button{
+    transition: 0.51s;
+
+    margin-left: 20%;
+    background: none;
+    border: none;
+    font-weight: 600;
+    &:hover{
+
+      transition: 0.51s;
+      font-size: 130%;
+    }
+  }
+}
+

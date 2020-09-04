@@ -1,0 +1,26 @@
+<div [class.todo]="!finished" [class.todoActive]="finished">
+  <div class="todo-firstBlock">
+    <input   type="checkbox"  (input)="statusChange()">
+  <h2 *ngIf="!editToggle">{{todo.title}}</h2>
+  <input *ngIf="editToggle" [defaultValue]="todo.title" placeholder="title" name="title" (input)="handleChange($event)"/>
+    <span *ngIf="!editToggle">{{todo.status}}</span>
+    <input *ngIf="editToggle" [defaultValue]="todo.status" placeholder="status" name="status" (input)="handleChange($event)"/>
+
+  </div>
+    <p *ngIf="!editToggle">{{todo.description}}</p>
+  <input *ngIf="editToggle" [defaultValue]="todo.description" placeholder="description" name="description" (input)="handleChange($event)"/>
+ <div class="todo-secondBlock">
+   <h4 *ngIf="!editToggle">{{todo.date}}</h4>
+   <input  *ngIf="editToggle" [defaultValue]="todo.date"  placeholder="date" name="date" (input)="handleChange($event)"/>
+   <h4 *ngIf="!editToggle">{{todo.placeName}}</h4>
+   <input *ngIf="editToggle" [defaultValue]="todo.placeName" placeholder="place Name" name="placeName" (input)="handleChange($event)"/>
+   <h4 *ngIf="!editToggle">{{todo.address}}</h4>
+   <input *ngIf="editToggle" [defaultValue]="todo.address" placeholder="address" name="address" (input)="handleChange($event)"/>
+   <button (click)="edit()">edit</button>
+   <button (click)="delete(index)">delete</button>
+
+ </div>
+
+
+</div>
+
